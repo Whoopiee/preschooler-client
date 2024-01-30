@@ -1,0 +1,60 @@
+@import '../../../../styles/utils';
+
+.lake {
+  @extend %center;
+  @extend %mb-2;
+  @extend %mt-1;
+  width: 100%;
+}
+
+.container_prev {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+.content__prev {
+  width: 28%;
+  margin-bottom: 25px;
+}
+
+.img {
+  width: 100%;
+  object-fit: contain;
+  border-radius: 25px;
+}
+
+.text {
+
+  @include wide {
+
+    font-size: 20px;
+  }
+}
+
+.toolsList {
+  @extend %center;
+  @extend %mb-2;
+
+  padding: 15px;
+}
+
+.color {
+  width: 70px;
+  height: 70px;
+  background-color: red;
+  transition: box-shadow $td;
+
+  &:not(:last-child) {
+    margin-right: 25px;
+  }
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  &.selected {
+    border: 3px #444 solid;
+  }
+}

@@ -1,0 +1,46 @@
+@import "../../../styles/utils.scss";
+
+.button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  box-sizing: border-box;
+  border: 1px #4e4e4e solid;
+  border-radius: 40px;
+  overflow: hidden;
+  background-color: #d4f1ff;
+  transition: background-color .15s linear;
+
+  @include large {
+    width: 300px;
+  }
+}
+
+.text {
+  margin: auto;
+}
+
+.imageDiv {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-end;
+}
+
+.image {
+  width: 70px;
+}
+
+.svg {
+  width: 20px;
+  height: 20px;
+}
+
+.active {
+  background-color: #ff006675;
+  background-size: cover;
+  background-repeat: repeat;
+}

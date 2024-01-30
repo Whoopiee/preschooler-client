@@ -1,0 +1,33 @@
+@import '../../../styles/utils';
+
+.control {
+  display: block;
+  box-sizing: border-box;
+
+  width: 100%;
+  height: 50px;
+  
+  padding: 10px 15px;
+  font-size: 20px;
+
+  border: 1px black solid;
+  border-radius: 36px;
+
+  &::placeholder {
+    color: $border;
+  }
+
+  @include small {
+    height: 60px;
+    font-size: 24px;
+  }
+
+  @media (min-width: 1921px) {
+    border-width: 2px;
+  }
+}
+
+.field {
+  width: 100%;
+  height: 100%;
+}

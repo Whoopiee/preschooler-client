@@ -1,0 +1,71 @@
+@import '../../styles/utils';
+
+.form {
+  @extend %center;
+  @extend %smallText;
+
+  padding-top: 40px;
+  flex-direction: column;
+  width: fit-content;
+  height: 100%;
+}
+
+.field {
+  margin-bottom: 5px;
+
+  &>*:nth-child(1) {
+    margin-bottom: 15px;
+    justify-items: start;
+    display: block;
+  }
+
+  @include wide {
+    display: grid;
+    grid-template-columns: 300px 500px;
+    grid-template-rows: auto 21px;
+    align-items: center;
+    justify-items: end;
+    column-gap: 30px;
+
+    margin-bottom: 30px;
+    text-align: end;
+  }
+}
+
+.error {
+  grid-column: 2;
+  justify-self: start;
+  align-self: end;
+  line-height: 1;
+}
+
+.textField {
+  @extend %smallText;
+  height: 50px;
+
+  &::placeholder {
+    @extend %smallText;
+    color: rgb(161, 161, 161);
+  }
+}
+
+.button {
+  @extend %primaryButton;
+  width: 150px;
+
+  @include small {
+    width: 200px;
+  }
+}
+
+.closeButton {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  background-color: #fff;
+
+  @include small {
+    top: 35px;
+    right: 35px;
+  }
+}

@@ -1,0 +1,118 @@
+@import "../../../../../styles/utils";
+
+.container {
+  @extend %center;
+  @extend %mt-2;
+  flex-direction: column;
+  width: 100%;
+}
+
+.title {
+  @extend %mb-1;
+}
+
+.image {
+  width: 80%;
+}
+
+.dragContainer {
+  @extend %center;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.wrapper {
+  @extend %center;
+  position: relative;
+  width: 30%;
+  height: 80%;
+  max-width: 230px;
+  min-height: 230px;
+  background-color: #F6F6F6;
+  border-radius: 30px;
+  border: 1px solid black;
+  user-select: none;
+}
+
+.draggable {
+  width: 10%;
+  max-width: 210px;
+  max-height: 210px;
+  position: absolute;
+  z-index: 1;
+}
+
+.imageOrnament {
+  width: 100%;
+}
+
+.ornament0 {
+  @include small {
+    width: 60%;
+  }
+
+  @include wide {
+    width: 70%;
+  }
+
+  @include large {
+    width: 80%;
+  }
+}
+
+.ornament1 {
+  @include small {
+    width: 30%;
+  }
+
+  @include wide {
+    width: 35%;
+  }
+
+  @include large {
+    width: 44%;
+  }
+}
+
+.ornament2 {
+  @include small {
+    width: 15%;
+  }
+
+  @include wide {
+    width: 17%;
+  }
+
+  @include large {
+    width: 20%;
+  }
+}
+
+.ornament3 {
+  @include small {
+    width: 20%;
+  }
+
+  @include wide {
+    width: 25%;
+  }
+
+  @include large {
+    width: 28%;
+  }
+}
+
+.ornament4 {
+  @include small {
+    width: 13%;
+  }
+
+  @include wide {
+    width: 14%;
+  }
+
+  @include large {
+    width: 16%;
+  }
+}

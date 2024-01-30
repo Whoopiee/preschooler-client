@@ -1,0 +1,119 @@
+@import '../../../../styles/utils';
+
+$baseGap: 10px;
+
+.level {
+  position: relative; // for explosion position
+  min-height: 100%;
+}
+
+.playzone {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: $baseGap;
+  column-gap: $baseGap;
+  height: auto;
+
+  @include small {
+    column-gap: 100px;
+  }
+
+  @include wide {
+    column-gap: 200px;
+  } 
+}
+
+.section {
+  display: flex;
+  gap: 50px;
+  // flex-direction: column;
+
+  &:nth-child(2) {
+    flex-direction: row-reverse;
+
+    @media screen and (max-width: 375px) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  @include mobile {
+    gap: 20px;
+  }
+
+  @media screen and (max-width: 375px) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.group {
+  @extend %center;
+  flex-direction: column;
+  line-height: 1.3;
+}
+
+.counter {
+  color: rgb(8, 151, 8);
+  font-size: 28px;
+}
+
+.drop {
+  padding: $baseGap $baseGap 0;
+
+  background-color: rgb(221, 221, 219);
+  border-radius: 22px;
+  transition: background-color 0.5s ease;
+  width: 100%;
+
+  &.success {
+    background-color: $lightGreen;
+  }
+
+  &.over {
+    background-color: #acacac;
+  }
+
+  @media screen and (max-width: 375px) {
+    width: auto;
+  }
+}
+
+.card {
+  @extend %center;
+
+  user-select: none; // for not selecting text and images accidentally
+
+  width: 80px;
+  height: 80px;
+
+  margin: 0 0 $baseGap; // gap плохо работает с beeautiful-dnd
+
+  background-color: $background;
+  border-radius: 15px;
+  transition: background-color 0.3s ease;
+
+  &.dragging {
+    background-color: #faf9f9;
+  }
+
+  @include tablet {
+    width: 100px;
+    height: 100px;
+  }
+
+  @include small {
+    width: 130px;
+    height: 130px;
+    border-radius: 25px;
+  }
+
+  @include wide {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.image {
+  max-width: 80%;
+}

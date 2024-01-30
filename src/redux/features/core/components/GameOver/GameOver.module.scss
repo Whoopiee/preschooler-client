@@ -1,0 +1,39 @@
+@import '../../../../../styles/utils';
+
+.gameOver {
+  @extend %center;
+  @extend %min-height-1;
+  flex-direction: column;
+}
+
+.confettiContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.gameName {
+  @extend %mb-3;
+}
+
+.buttons {
+  display: flex;
+  gap: 30px;
+
+  @include mobile {
+    flex-direction: column;
+  }
+}
+
+.button {
+  @extend %primaryButton-big;
+
+  &.continue {
+    @include mobile {
+      order: -1;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@import "../../styles/utils";
+
+.image {
+  height: auto;
+  width: 100%;
+  max-width: 900px;
+  object-fit: contain;
+}
+
+.input {
+  @extend %mt-1;
+  @extend %mb-1;
+  
+  width: 100px;
+  height: 40px;
+  padding-left: 15px;
+
+  border: 3px solid #6A6A6A;
+  border-radius: 25px;
+  border-style: dashed;
+
+  @include wide {
+    width: 100px;
+    height: 40px;
+    padding: 10px 20px;
+  }
+}

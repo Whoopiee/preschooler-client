@@ -1,0 +1,93 @@
+@import '../../../../styles/utils';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 2rem;
+
+    .container__text {
+        font-size: 21px;
+        width: 50%;
+        text-align: center;
+    }
+
+    .img_block {
+        display: flex;
+        justify-content: space-between;
+        width: 95%;
+
+        .sculptureImg {
+            width: 23%;
+            object-fit: contain;
+        }
+    }
+}
+
+.back {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin: 20px;
+    height: 740px;
+    border-radius: 50px;
+    position: relative;
+    display: flex;
+
+    .buttonImg {
+        background-color: transparent content-box;
+        background-clip: content-box;
+        border: none;
+        position: absolute;
+    }
+
+    .buttonImg0 {
+        right: 74%;
+        bottom: 56%;
+        width: 8%;
+        rotate: 20deg;
+
+        @include wide {
+            bottom: 58%;
+        }
+
+        @include large {
+            bottom: 61%;
+        }
+    }
+
+    .buttonImg1 {
+        bottom: 51%;
+        right: 55%;
+        width: 9%;
+
+        @include wide {
+            bottom: 52%;
+        }
+    }
+
+    .buttonImg2 {
+        bottom: 50%;
+        right: 40%;
+        width: 13%;
+    }
+
+    .buttonImg3 {
+        bottom: 45%;
+        right: 7%;
+        width: 18%;
+
+        @include wide {
+            bottom: 42%;
+        }
+
+        @include large {
+            bottom: 42%;
+        }
+    }
+
+    .inactive {
+        display: block;
+    }
+}

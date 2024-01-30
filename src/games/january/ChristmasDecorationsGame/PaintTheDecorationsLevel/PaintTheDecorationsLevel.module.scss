@@ -1,0 +1,19 @@
+@import '../../../../styles/utils';
+
+.layout {
+  max-width: 1000px;
+  margin-bottom: 20px;
+
+  @include small {
+    width: 600px;
+  }
+
+  @include wide {
+    width: 800px;
+    margin-bottom: 40px;
+  }
+
+  @include large {
+    width: 1000px
+  }
+}

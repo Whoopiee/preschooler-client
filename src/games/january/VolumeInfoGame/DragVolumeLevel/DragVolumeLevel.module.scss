@@ -1,0 +1,108 @@
+@import '../../../../styles/utils';
+
+.list {
+  @extend %center;
+  margin-top: 20px;
+}
+
+.item {
+  width: 85px;
+  height: 85px;
+  margin: 5px;
+
+  background-color: $background;
+  border-radius: 15px;
+  transition: background-color 0.3s ease;
+
+  &.dragging {
+    background-color: #faf9f9;
+  }
+
+  @include tablet {
+    width: 100px;
+    height: 100px;
+  }
+
+  @include small {
+    width: 130px;
+    height: 130px;
+    margin: 10px;
+    border-radius: 25px;
+  }
+
+  @include wide {
+    width: 150px;
+    height: 150px;
+  }
+
+  @include large {
+    width: 180px;
+    height: 180px;
+    margin: 15px;
+    border-radius: 44px;
+  }
+}
+
+.fishs {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.basketContainer {
+  @extend %mt-2;
+
+  position: relative;
+
+  width: 200px;
+  height: 170px;
+
+  @include small {
+    width: 250px;
+    height: 200px;
+  }
+
+  @include wide {
+    width: 375px;
+    height: 300px;
+  }
+
+  @include large {
+    width: 400px;
+    height: 350px;
+  }
+}
+
+.basketImage {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.basketGlow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  border-radius: 50%;
+  transition: box-shadow 0.5s ease;
+
+  &.visible {
+    box-shadow:
+      0 0 60px 45px #d20e0e,
+      0 0 50px 50px rgb(255, 152, 41);
+
+    @include small {
+      box-shadow:
+        0 0 50px 25px #d20e0e,
+        0 0 80px 80px rgb(255, 152, 41);
+    }
+
+    @include large {
+      box-shadow:
+        0 0 50px 30px #d20e0e,
+        0 0 100px 100px rgb(255, 152, 41);
+    }
+  }
+}

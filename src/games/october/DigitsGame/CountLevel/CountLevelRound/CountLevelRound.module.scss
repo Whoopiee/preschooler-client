@@ -1,0 +1,67 @@
+@import '../../../../../styles/utils';
+
+.question {
+  font-size: 24px;
+}
+
+.image {
+  height: 300px;
+}
+
+.buttons {
+  @extend %center;
+  position: relative;
+  z-index: 1;
+  height: 300px;
+}
+
+.button {
+  position: absolute;
+  font-size: 42px;
+  font-weight: 500;
+
+  height: 100px;
+  width: 100px;
+  border-radius: 34px;
+
+  transition: transform 1s ease;
+}
+
+.button1 {
+  transform: translate(-65%, 65%);
+}
+
+.button2 {
+  transform: translate(65%, 65%);
+}
+
+.button3 {
+  transform: translate(-65%, -65%);
+}
+
+.button4 {
+  transform: translate(65%, -65%);
+}
+
+.play {
+  height: 40px;
+  width: 40px;
+  margin-left: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+
+  @include tablet {
+    height: 50px;
+    width: 50px;
+    margin-left: 20px;
+  }
+}
+
+.title {
+  @extend %center;
+  flex-direction: column;
+
+  @include tiny {
+    flex-direction: row;
+  }
+}
+

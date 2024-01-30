@@ -1,0 +1,59 @@
+@import '../../../styles/utils';
+
+.card {
+  @extend %center;
+  flex-direction: column;
+  width: fit-content;
+  padding: 5px;
+}
+
+.image {
+  width: 140px;
+  height: 140px;
+
+  @include tiny {
+    width: 160px;
+    height: 160px;
+  }
+
+  @include tablet {
+    width: 180px;
+    height: 180px;
+  }
+
+  @include small {
+    width: 200px;
+    height: 200px;
+  }
+
+  @include wide {
+    width: 230px;
+    height: 230px;
+  }
+}
+
+.button {
+  min-height: 55px;
+  width: 200px;
+  border-radius: 50px;
+  margin-bottom: 15px;
+
+  background: #ffcebe;
+  border: 2px solid #fa855f;
+
+  cursor: pointer;
+
+  &:hover {
+    background: #ffc1be;
+  }
+
+  @include tablet {
+    width: 220px;
+    height: 60px;
+  }
+
+  @include small {
+    width: 270px;
+    height: 70px
+  }
+}

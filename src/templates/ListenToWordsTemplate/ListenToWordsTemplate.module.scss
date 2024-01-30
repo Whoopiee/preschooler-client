@@ -1,0 +1,72 @@
+@import "../../styles/utils";
+
+.level {
+  @include large {
+    display: grid;
+    grid-template-columns: 3fr 5fr;
+    grid-gap: 50px;
+  }
+}
+
+.image {
+  @extend %mb-2;
+  display: block;
+  width: 100%;
+
+  border-radius: 50px;
+
+  @include large {
+    margin: 0;
+  }
+}
+
+.audio {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  row-gap: 30px;
+
+  @include small {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 50px;
+  }
+}
+
+.track {
+  display: grid;
+  width: 100%;
+  border-radius: 50px;
+}
+
+.play {
+  display: grid;
+  grid-template-columns: 8fr 3fr 1fr;
+  place-items: center;
+
+  height: 90px;
+  width: 100%;
+  border-radius: 50px;
+  margin-bottom: 15px;
+
+  background: #ffcebe;
+  border: 2px solid #fa855f;
+
+  cursor: pointer;
+
+  &:hover {
+    background: #ffc1be;
+  }
+
+  @include tablet {
+    grid-template-columns: 8fr 3fr;
+  }
+
+  @include small {
+    grid-template-columns: 8fr 3fr 0.5fr;
+  }
+}
+
+.icon {
+  width: 70px;
+  height: 70px;
+}

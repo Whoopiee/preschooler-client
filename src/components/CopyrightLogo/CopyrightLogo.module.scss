@@ -1,0 +1,32 @@
+@import '../../styles/utils';
+
+.copyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+
+  @include wide {
+    margin: 0;
+  }
+}
+
+.developed {
+  @include mobile {
+    display: none;
+  }
+}
+
+.logo {
+
+  @media screen and (max-width: 1200px) {
+    width: 140px;
+    height: 35px;
+    margin-top: 9px;
+  }
+
+  @include wide {
+    width: 169px;
+    height: 46px;
+  }
+}

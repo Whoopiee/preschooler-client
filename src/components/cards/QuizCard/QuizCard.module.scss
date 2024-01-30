@@ -1,0 +1,93 @@
+@import '../../../styles/utils';
+
+.card {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  row-gap: 10px;
+  height: 100%;
+}
+
+.button {
+  @extend %center;
+  position: relative;
+
+  height: 100%;
+  width: 100%;
+
+  border: 2px #c4c4c4 solid;
+  border-radius: 40px;
+  background-color: $mainColor;
+
+  transition: transform 0.3s ease,
+    background-color 0.3s ease;
+
+  cursor: pointer;
+  overflow: hidden;
+
+  &.rounded {
+    border-radius: 50%;
+  }
+
+  &.checkedFloppy {
+    background-color: $lightGreen;
+  }
+
+  &:not(.checkedFloppy):hover {
+    background-color: #fcfcfc;
+  }
+
+  &.hasScaleOnHover:hover {
+    transform: scale(1.1);
+  }
+
+  &.hasImageOnly {
+    background-color: transparent;
+    border: none;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}
+
+.text {
+  @include setHeightByTextLines(2);
+  padding-left: 10px;
+}
+
+.image {
+  transition: opacity 1s ease;
+  opacity: 1;
+  width: 100%;
+
+  &.rounded {
+    max-width: 100%;
+    height: 100%;
+    transform: translateY(10%);
+  }
+
+  &.checked {
+    opacity: 0.6;
+  }
+
+  &.hasImageOnly {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.mark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.checkmark {
+  width: 100%;
+  height: 100%;
+}
+
+.textCentered {
+  text-align: center;
+}

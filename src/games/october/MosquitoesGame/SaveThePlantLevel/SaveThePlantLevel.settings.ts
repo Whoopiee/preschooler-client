@@ -1,0 +1,88 @@
+import { v4 as uuid } from 'uuid';
+import { TInsect } from './Insect';
+import styles from './SaveThePlantLevel.module.scss';
+
+export const insectsInitial: TInsect[] = [
+  {
+    id: uuid(),
+    image: 'animals/tlya-72x86.png',
+    className: styles.tlyaOne,
+    rotate: 15,
+    isHarmful: true,
+    isKilled: false,
+    group: 'Tlya',
+  },
+  {
+    id: uuid(),
+    image: 'animals/tlya-72x86.png',
+    className: styles.tlyaTwo,
+    rotate: -70,
+    isHarmful: true,
+    isKilled: false,
+    group: 'Tlya',
+  },
+  {
+    id: uuid(),
+    image: 'animals/colorado-100x100.png',
+    className: styles.coloradoOne,
+    rotate: -30,
+    isHarmful: true,
+    isKilled: false,
+    group: 'Colorado',
+  },
+  {
+    id: uuid(),
+    image: 'animals/colorado-100x100.png',
+    className: styles.coloradoTwo,
+    rotate: 45,
+    isHarmful: true,
+    isKilled: false,
+    group: 'Colorado',
+  },
+  {
+    id: uuid(),
+    image: 'animals/bee-100x100.png',
+    className: styles.beeOne,
+    rotate: 45,
+    isHarmful: false,
+    group: 'None',
+  },
+  {
+    id: uuid(),
+    image: 'animals/bee-100x100.png',
+    className: styles.beeTwo,
+    rotate: -45,
+    isHarmful: false,
+    group: 'None',
+  },
+  {
+    id: uuid(),
+    image: 'animals/ant-60x60.png',
+    className: styles.antOne,
+    isHarmful: false,
+    group: 'None',
+  },
+  {
+    id: uuid(),
+    image: 'animals/ant-60x60.png',
+    className: styles.antTwo,
+    isHarmful: false,
+    group: 'None',
+  },
+  {
+    id: uuid(),
+    image: 'animals/ant-60x60.png',
+    className: styles.antThree,
+    rotate: 90,
+    isHarmful: false,
+    group: 'None',
+  },
+  {
+    id: uuid(),
+    image: 'animals/ladybug-100x100.png',
+    className: styles.ladyBug,
+    rotate: -60,
+    isHarmful: false,
+    group: 'None',
+  },
+];

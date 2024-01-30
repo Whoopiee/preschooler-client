@@ -1,0 +1,63 @@
+@import '../../../../../styles/utils';
+
+.sections {
+  @extend %mb-1;
+  width: 100%;
+
+  display: grid;
+  place-items: center;
+  gap: 15px;
+
+  @include small {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+
+  @include wide {
+    gap: 25px;
+  }
+
+  @include large {
+    gap: 35px;
+  }
+}
+
+.filters {
+  @extend %mb-2;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  flex-wrap: wrap;
+
+  @include wide {
+    gap: 25px;
+  }
+
+  @include large {
+    gap: 35px;
+  }
+
+  .filterItem {
+    width: 45%;
+
+    @include tablet {
+      width: 30%;
+    }
+
+    @include small {
+      flex: 1;
+    }
+
+    @include wide {
+      flex: 1;
+
+      &:not(:last-child) {
+        margin: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,102 @@
+@import '../../../../styles/utils';
+
+.toolsList {
+  @extend %center;
+  @extend %mt-1;
+  @extend %mb-1;
+
+  flex-direction: column;
+}
+
+.toolItem {
+  width: 100%;
+  height: 100px;
+
+  display: flex;
+
+  &:not(:last-child) {
+    margin-bottom: 25px;
+  }
+
+  @media (min-width: 1050px) {
+    max-width: 70%;
+  }
+
+  @include wide {
+    max-width: 80%;
+  }
+
+  @include large {
+    max-width: 100%;
+  }
+}
+
+.color {
+  box-sizing: border-box;
+
+  width: 70px;
+  height: 70px;
+  background-color: red;
+  transition: box-shadow $td;
+
+  &:not(:last-child) {
+    margin-right: 25px;
+  }
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  &.selected {
+    border: 3px #444 solid;
+  }
+}
+
+.mark {
+  flex: 1;
+  height: 75px;
+  min-width: 170px;
+
+  &:not(:last-child) {
+    margin-right: 25px;
+  }
+
+  @include mobileAndTablet {
+    display: none;
+  }
+}
+
+.tipText {
+  flex: 3;
+  text-align: left;
+  max-width: 550px;
+}
+
+.earth {
+  @extend %center;
+  flex-direction: column;
+  width: 100%;
+
+  @media (min-width: 1600px) {
+    flex-direction: row;
+  }
+}
+
+.round {
+  width: 100%;
+
+  @media (min-width: 1600px) {
+    width: 50%;
+  }
+}
+
+.west {
+  @media (max-width: 1600px) {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: 1600px) {
+    margin-right: 25px;
+  }
+}

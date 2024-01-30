@@ -1,0 +1,43 @@
+@import '../../../../styles/utils';
+
+.container {
+  @extend %center;
+  flex-direction: column;
+  padding: 20px 0;
+  gap: 15px;
+
+  @include wide {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.card {
+  @extend %center;
+  width: 150px;
+  flex-direction: column;
+}
+
+.image {
+  @extend %mb-1;
+}
+
+.input {
+  box-sizing: border-box;
+  width: 50%;
+  height: 50px;
+  padding: 7px;
+  background-color: #F1F1F1;
+  border: 1px solid #6A6A6A;
+  border-radius: 10px;
+  text-align: center;
+
+  @include small {
+    height: 60px;
+  }
+}
+
+.label {
+  @extend %center;
+  height: 60px;
+}

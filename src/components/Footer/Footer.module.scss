@@ -1,0 +1,74 @@
+@import "../../styles/utils";
+
+.footer {
+  @extend %padding-horizontal;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffe484;
+  flex-direction: column;
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  @include wide {
+    flex-direction: row;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.copyright {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  gap: 15px;
+
+  @include wide {
+    margin: 0;
+  }
+}
+
+.developed {
+  @include mobile {
+    display: none;
+  }
+}
+
+.logo {
+  width: 169px;
+  height: 46px;
+
+  @media screen and (max-width: 1024px) {
+    width: 143px;
+    height: 38px;
+  }
+}
+
+.contacts {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  white-space: nowrap;
+  gap: 30px;
+
+  @include mobile {
+    display: flex;
+    font-size: 22px;
+    flex-direction: column;
+    gap: 18px;
+  }
+}
+
+.support {
+  display: none;
+
+  @media screen and (min-width: 1400px) and (min-width: 1600px) {
+    display: block;
+  }
+}
+
+.phone:last-child {
+  display: block;
+}

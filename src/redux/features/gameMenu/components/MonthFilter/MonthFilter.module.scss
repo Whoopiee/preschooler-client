@@ -1,0 +1,90 @@
+@import '../../../../../styles/utils';
+
+.monthFilter {
+  @extend %mb-1; // will be removed
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 70px;
+  gap: 20px;
+
+  width: 100%;
+
+  max-height: 0;
+  transition: max-height 0.3s ease,
+    opacity 0.5s ease;
+  opacity: 0.25;
+
+  overflow: hidden;
+
+  &.opened {
+    max-height: 1200px;
+    opacity: 1;
+
+    @include tablet {
+      max-height: 1000px;
+    }
+  }
+
+  @include tablet {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 60px;
+    gap: 20px;
+  }
+
+  @include wide {
+    grid-template-columns:  1fr 1fr 1fr 1fr;
+    grid-auto-rows: 76px;
+    gap: 22px 33px;
+  }
+
+  @include large {
+    grid-auto-rows: 147px;
+  }
+}
+
+.button {
+  @extend %center;
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+  border-radius: 44px;
+
+  background: #f1f1f1;
+  border: 2px solid #6a6a6a;
+  color: #252525;
+
+  &:hover {
+    background: #fbfbfb;
+  }
+
+  &.blue {
+    background: #cce5ff;
+    border: 2px solid #5a9ced;
+    
+    &:hover {
+      background: #bfdaff;
+    }
+  }
+}
+
+.lock {
+  position: absolute;
+  right: 25%;
+
+  width: 25px;
+  height: 25px;
+
+  @include tablet {
+    right: 15%;
+  }
+
+  @include wide {
+    right: 10%;
+  }
+
+  @include large {
+    right: 15%;
+  }
+}

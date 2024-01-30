@@ -1,0 +1,42 @@
+@import '../../../../../styles/utils';
+
+.button {
+  @extend %mb-1;
+
+  position: relative;
+
+  height: 40px;
+  width: 70%;
+  border-radius: 44px;
+
+  @include tablet {
+    height: 46px;
+    width: 50%;
+  }
+
+  @include small {
+    height: 60px;
+    width: 400px;
+  }
+
+  @include wide {
+    height: 70px;
+  }
+}
+
+.arrow {
+  position: absolute;
+  right: 10%;
+
+  transform: rotate(90deg);
+
+  font-size: 28px;
+
+  @include small {
+    font-size: 32px;
+  }
+
+  &.closed {
+    transform: rotate(-90deg);
+  }
+}

@@ -1,0 +1,9 @@
+@import '../../styles/utils';
+
+.container {
+  @extend %padding-horizontal;
+
+  max-width: 2500px;
+  margin: 0 auto;
+  min-height: 100%;
+}

@@ -1,0 +1,121 @@
+@import '../../../../../styles/utils';
+
+.button {
+  box-sizing: border-box;
+  height: 100px;
+  width: 100%;
+
+  border-radius: 25px;
+  border-width: 3px;
+  border-style: solid;
+
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  place-items: center;
+
+  transition: background-color $td ease,
+    height $td ease;
+
+  @include mobileAndTablet {
+    width: 100%;
+  }
+
+  @include tablet {
+    height: 125px;
+  }
+
+  @include small {
+    height: 200px;
+    justify-items: start;
+  }
+
+  @include wide {
+    height: 300px;
+    padding: 0 25px;
+    border-radius: 40px;
+  }
+
+  @include large {
+    height: 360px;
+  }
+
+  &.gameOpened {
+    @include small {
+      height: 100px;
+    }
+  
+    @include wide {
+      height: 170px;
+    }
+  
+    @include large {
+      height: 200px;
+    }
+  }
+}
+
+.text {
+  font-size: 22px;
+  margin-left: 10px;
+
+  @include tablet {
+    font-size: 24px;
+  }
+
+  @include small {
+    font-size: 20px;
+    width: 60%;
+    text-align: left;
+  }
+
+  @media (min-width: 900px) {
+    width: auto;
+    display: block;
+    font-size: 28px;
+    max-width: 60%;
+  }
+
+  @include wide {
+    width: auto;
+    display: block;
+    font-size: 28px;
+    max-width: 60%;
+  }
+
+  @media (min-width: 1200px) {
+    text-align: left;
+    display: block;
+    font-size: 32px;
+    max-width: 60%;
+  }
+}
+
+.icon {
+  width: 35px;
+  height: 35px;
+
+  @include tablet {
+    width: 45px;
+    height: 45px;
+  }
+
+  @include small {
+    width: 35px;
+    height: 35px;
+  }
+
+  @media (min-width: 1000px) {
+    width: 50px;
+    height: 50px;
+  }
+
+  @include wide {
+    width: 60px;
+    height: 60px;
+  }
+
+  @include large {
+    width: 80px;
+    height: 80px;
+  }
+}

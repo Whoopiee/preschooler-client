@@ -1,0 +1,59 @@
+@import '../../../styles/utils';
+
+.positionCard {
+  @extend %center;
+  flex-direction: column;
+
+  height: 400px;
+  width: 100%;
+}
+
+.card {
+  @extend %center;
+  @extend %mb-1;
+
+  height: 100%;
+  width: 100%;
+
+  border: 2px #c4c4c4 solid;
+  border-radius: 40px;
+  background: $mainColor;
+
+  &.checkedFloppy {
+    background-color: #d3ffc4;
+  }
+}
+
+.image {
+  max-width: 80%;
+
+  &.checked {
+    opacity: 60%;
+  }
+}
+
+.buttonsList {
+  @extend %center;
+  width: 100%;
+  gap: 10px;
+}
+
+.button {
+  position: relative;
+
+  width: 50px;
+  height: 50px;
+
+  border-radius: 10px;
+  border: 2px #c4c4c4 solid;
+  background-color: #fff;
+}
+
+.checkmark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 75%;
+}

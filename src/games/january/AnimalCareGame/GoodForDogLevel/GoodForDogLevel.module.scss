@@ -1,0 +1,29 @@
+@import "../../../../styles/utils";
+
+.image {
+  max-width: 400px;
+  width: 80%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  @include tiny {
+    width: 50%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  @include tablet {
+    width: 60%;
+  }
+
+  @include small {
+    width: 40%;
+  }
+
+  @include wide {
+    width: 25%;
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+
+}

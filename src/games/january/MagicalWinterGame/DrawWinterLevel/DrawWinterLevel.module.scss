@@ -1,0 +1,25 @@
+@import '../../../../styles/utils';
+
+.container {
+  @extend %center;
+  flex-direction: column;
+  width: 100%;
+  gap: 70px;
+  margin-bottom: 40px;
+
+  @include wide {
+    flex-direction: row;
+  }
+}
+
+.block {
+  width: 400px;
+
+  @include wide {
+    width: 450px;
+  }
+
+  @include large {
+    width: 590px;
+  }
+}

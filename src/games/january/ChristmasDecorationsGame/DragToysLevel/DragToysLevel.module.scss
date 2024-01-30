@@ -1,0 +1,74 @@
+@import '../../../../styles/utils';
+
+.container {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+
+  @include wide {
+    padding: 20px;
+  }
+}
+
+.image {
+  width: 40%;
+  max-width: 600px;
+  max-height: 1000px;
+  // @include wide {
+  //   width: 40%;
+  // }
+
+  // @include large {
+  //   width: 45%;
+  // }
+}
+
+.dragContainer {
+  @extend %center;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.wrapper {
+  @extend %center;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  // width: 30%;
+  // height: 80%;
+  // max-width: 230px;
+  // min-height: 230px;
+  background-color: #F6F6F6;
+  border-radius: 30px;
+  border: 1px solid black;
+  user-select: none;
+
+  @include wide {
+    width: 150px;
+    height: 150px;
+  }
+
+  @include large {
+    width: 200px;
+    height: 200px;
+  }
+
+}
+
+.draggable {
+  width: 30%;
+  max-width: 210px;
+  max-height: 210px;
+  position: absolute;
+  z-index: 1;
+
+  @include wide {
+    width: 25%;
+  }
+}
+
+.imageOrnament {
+  width: 100%;
+}

@@ -1,0 +1,56 @@
+@import '../../styles/utils';
+
+%mb-home-page {
+  @extend %mb-2;
+
+  @include wide {
+    margin-bottom: 40px;
+  }
+}
+
+.container {
+  @extend %center;
+  @extend %mb-home-page;
+
+  justify-content: start;
+
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.loader {
+  height: 100vh;
+  width: 100vw;
+
+  @extend %center;
+}
+
+.main {
+  @extend %padding-horizontal;
+  @extend %mb-home-page;
+
+  position: relative;
+  z-index: 2;
+
+  @extend %center;
+  justify-content: start;
+  flex-direction: column;
+
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding-top: 25px;
+
+  border: 2px solid $dark;
+  border-radius: 0px 50px 50px 50px;
+  background-color: #fff;
+
+  // очень важное правило. Не знаю почему, но без него
+  // дети, даже глубоко вложенные, расстягивают меню
+  // overflow: hidden;
+
+  @include wide {
+    border-radius: 0px 80px 80px 80px;
+  }
+}

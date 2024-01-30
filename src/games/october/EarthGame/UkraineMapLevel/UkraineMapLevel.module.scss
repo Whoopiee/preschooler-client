@@ -1,0 +1,40 @@
+@import '../../../../styles/utils';
+
+.level {
+  @extend %center;
+  position: relative;
+  flex-direction: column;
+  width: fit-content;
+  height: 100%;
+}
+
+.pointerContainer {
+  position: absolute;
+  z-index: 1;
+  top: -20px;
+  width: 100px;
+  height: 100px;
+
+  &:hover {
+    cursor: grab;
+  }
+}
+
+.pointer {
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+}
+
+.image {
+  width: 600px;
+
+  @include wide {
+    width: 700px;
+  }
+
+  @include large {
+    width: 900px;
+  }
+}
+

@@ -1,0 +1,7 @@
+@import '../../../styles/utils';
+
+.canvas {
+  @extend %center;
+  @extend %mb-2;
+  width: 100%;
+}

@@ -1,0 +1,90 @@
+@import "../../styles/utils";
+
+%cardSize {
+  width: 70px;
+  height: 70px;
+
+  @include tablet {
+    width: 100px;
+    height: 100px;
+  }
+
+  @include small {
+    width: 130px;
+    height: 130px;
+  }
+
+  @include wide {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.level {
+  position: relative; // for explosion position
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  gap: 10px;
+  
+}
+
+.slot {
+  @extend %center;
+  @extend %cardSize;
+  flex-direction: column;
+
+  padding: 10px;
+
+  @include tablet {
+    padding: 15px;
+  }
+
+  border-radius: 22px;
+  transition: background-color 0.5s ease;
+  user-select: none; 
+
+  &.heightByContent {
+    height: fit-content;
+  }
+
+  &.success {
+    background-color: $lightGreen;
+  }
+}
+
+.card {
+  @extend %center;
+  @extend %cardSize;
+
+  user-select: none; // for not selecting text and images accidentally
+
+  border-radius: 15px;
+  transition: background-color 0.3s ease,
+    border-color 0.3s ease;
+
+  &.placeholder {
+    border: 2px $border dashed;
+
+    &.over {
+      border-color: #fa855f;
+    }
+  }
+
+  @include small {
+    border-radius: 25px;
+  }
+}
+
+.image {
+  max-width: 80%;
+}
+
+.target_container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}

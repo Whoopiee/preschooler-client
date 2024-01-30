@@ -1,0 +1,36 @@
+@import '../../../styles/utils';
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.orange {
+  @extend %theme-orange;
+}
+
+.grey {
+  @extend %theme-grey;
+}
+
+.blue {
+  @extend %theme-blue;
+}
+
+.white {
+  @extend %theme-white;
+}
+
+.icon {
+  max-width: 100%;
+
+  @include small {
+    max-width: auto;
+  }
+
+  &.withText {
+    max-width: 15%;
+    margin-left: 10%;
+  }
+}

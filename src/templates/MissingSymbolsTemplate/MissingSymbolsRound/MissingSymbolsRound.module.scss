@@ -1,0 +1,98 @@
+@import "../../../styles/utils";
+
+$fixHeight-mobile: 200px;
+$fixHeight-small: 300px;
+
+.round {
+  @extend %center;
+  @extend %mt-2;
+
+  flex-direction: column;
+  width: 100%;
+}
+
+.guess {
+  @extend %mb-2;
+
+  @include small {
+    height: $fixHeight-small;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 3fr 1fr;
+  }
+}
+
+.word {
+  @extend %mt-2;
+
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: end;
+  align-self: center;
+
+  font-size: 48px;
+
+  @include tablet {
+    font-size: 80px;
+  }
+
+  @include small {
+    margin: 0;
+  }
+}
+
+.image {
+  grid-column: 4;
+  align-self: center;
+  object-fit: contain;
+
+  width: 70%;
+  height: $fixHeight-mobile;
+
+  @include small {
+    width: 100%;
+    height: $fixHeight-small;
+  }
+}
+
+.buttons {
+  @extend %center;
+  flex-direction: column;
+  gap: 40px;
+
+  width: 100%;
+
+  @include small {
+    flex-direction: row;
+    gap: 50px;
+  }
+}
+
+.item {
+  @extend %center;
+  width: 80%;
+  height: 100px;
+
+  @include small {
+    width: 250px;
+  }
+
+  @include wide {
+    height: 130px;
+  }
+}
+
+.button {
+  width: 100%;
+  height: 100%;
+
+  border-radius: 25px;
+  font-size: 32px;
+
+  @include small {
+    font-size: 40px;
+  }
+
+  @include wide {
+    font-size: 60px;
+  }
+}

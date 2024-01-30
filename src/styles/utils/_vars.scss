@@ -1,0 +1,45 @@
+$textColor: #000000;
+
+$mainColor: #FFFCF5;
+$secondaryColor: #FFE484;
+
+$lightGreen: #d3ffc4;
+
+$pink: #fdabaf;
+$pink-light: #ffe0e6;
+
+$dark: #252525;
+$light: #eee;
+$primary: #1b6eb8;
+$blue: #293b49;
+
+$background: #f1f1f1;
+$border: #adadad;
+
+$td: 0.3s; // transition duration
+
+// font size
+
+$mainText: (
+  "mobile": 16px,
+  "tablet": 20px,
+  "small": 22px,
+  "wide": 24px,
+  "large": 26px,
+);
+
+$smallText: (
+  "mobile": 18px,
+  "tablet": 18px,
+  "small": 20px,
+  "wide": 22px,
+  "large": 22px,
+);
+
+$cardSizeMobile: 200px;
+$cardSizeSmall: 250px;
+$cardSizeNormal: 300px;
+$cardSizeBig: 350px;
+$cardSizeBigest: 575px;
+
+$FILES_API_URL: 'https://api.sadok.dniprorada.gov.ua';

@@ -1,0 +1,256 @@
+.button {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  overflow: hidden;
+
+  &::after {
+    content: attr(data-text);
+    line-height: 1;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.background {
+  width: 100%;
+  height: 0%;
+  background-color: #61e2ff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  transition: height 1s ease,
+    opacity 1s ease;
+
+  &.full {
+    height: 70%;
+    opacity: 1;
+  } 
+}
+
+.wave {
+  position: relative;
+  height: 0%;
+  opacity: 0;
+  transform: translateY(40px); // just to fix bug
+  
+  transition-property: height, opacity, transform;
+  transition-duration: 1s;
+  transition-timing-function: ease;
+
+  &.full {
+    height: 30%;
+    transform: translateY(10px);
+    opacity: 1;
+  }
+}
+
+.bubbleContainer {
+  position: absolute;
+  height: 100%;
+
+  top: 0;
+  bottom: 10%;
+  right: 60%;
+  left: 0;
+
+  &.hidden {
+    display: none;
+  }
+
+  &.right {
+    top: 20%;
+    bottom: 20%;
+    right: 10%;
+    left: 70%;
+  }
+}
+
+.bubble {
+  position: absolute;
+  top: 53%;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+
+  &.small{
+    width: 10px;
+    height: 10px;
+    left: 50%;
+    animation: flowSmall 2s linear infinite;
+  }
+
+  &.smallLarge{
+    width: 10px;
+    height: 10px;
+    left: 43%;
+    animation: flowSmallLarge 0.9s linear infinite;
+  }
+
+  &.smallMedium{
+    width: 20px;
+    height: 20px;
+    left: 43%;
+    animation: flowSmallMedium 1.3s linear infinite;
+  }
+
+  &.medium{
+    width: 25px;
+    height: 25px;
+    left: 25%;
+    animation: flowMedium 0.8s linear infinite;
+  }
+
+  &.large{
+    width: 5px;
+    height: 5px;
+    left: 57%;
+    animation: flowLarge 0.7s linear infinite;
+  }
+}
+
+@keyframes flowLarge {
+  0% {
+    top: 53%;
+    left: 57%;
+    opacity: 0;
+  }
+  25% {
+    top: 45%;
+    left: 62%;
+    opacity: 1;
+  }
+  50% {
+    left: 67%;
+    opacity: 1;
+  }
+  75% {
+    left: 72%;
+    opacity: 1;
+  }
+  100% {
+    top: 15%;
+    left: 77%;
+    opacity: 0;
+  }
+}
+
+@keyframes flowSmall {
+  0% {
+    top: 53%;
+    left: 50%;
+    opacity: 0;
+  }
+  25% {
+    top: 45%;
+    left: 54%;
+    opacity: 1;
+  }
+  50% {
+    top: 37%;
+    left: 58%;
+    opacity: 1;
+  }
+  75% {
+    top: 29%;
+    left: 54%;
+    opacity: 1;
+  }
+  100% {
+    top: 21%;
+    left: 50%;
+    opacity: 0;
+  }
+}
+
+@keyframes flowSmallMedium {
+  0% {
+    top: 53%;
+    left: 43%;
+    opacity: 0;
+  }
+  25% {
+    top: 45%;
+    left: 47%;
+    opacity: 1;
+  }
+  50% {
+    top: 37%;
+    left: 51%;
+    opacity: 1;
+  }
+  75% {
+    top: 29%;
+    left: 47%;
+    opacity: 1;
+  }
+  100% {
+    top: 21%;
+    left: 43%;
+    opacity: 0;
+  }
+}
+
+@keyframes flowMedium {
+  0% {
+    top: 53%;
+    left: 45%;
+    opacity: 0;
+  }
+  25% {
+    top: 44%;
+    left: 48%;
+    opacity: 1;
+  }
+  50% {
+    top: 35%;
+    left: 51%;
+    opacity: 1;
+  }
+  75% {
+    top: 26%;
+    left: 48%;
+    opacity: 1;
+  }
+  100% {
+    top: 17%;
+    left: 45%;
+    opacity: 0;
+  }
+}
+
+@keyframes flowSmallLarge {
+  0% {
+    top: 53%;
+    left: 43%;
+    opacity: 0;
+  }
+  25% {
+    top: 44%;
+    left: 45%;
+    opacity: 1;
+  }
+  50% {
+    top: 35%;
+    left: 47%;
+    opacity: 1;
+  }
+  75% {
+    top: 26%;
+    left: 45%;
+    opacity: 1;
+  }
+  100% {
+    top: 17%;
+    left: 43%;
+    opacity: 0;
+  }
+}

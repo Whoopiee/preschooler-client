@@ -1,0 +1,64 @@
+@import '../../../../styles/utils';
+
+.content {
+  @extend %center;
+  flex-direction: column;
+  width: 100%;
+  gap: 25px;
+
+  @include large {
+    flex-direction: row;
+    gap: 40px;
+  }
+}
+
+.buttons {
+  @extend %center;
+  gap: 20px;
+
+  flex-direction: column;
+
+  @include small {
+    flex-direction: row;
+  }
+
+  @include large {
+    flex-direction: column;
+  }
+}
+
+.button {
+  box-sizing: border-box;
+  height: 100px;
+  width: 100%;
+  border: 1px #4e4e4e solid;
+  border-radius: 40px;
+  overflow: hidden;
+  background-color: #d4f1ff;
+
+  @include large {
+    width: 300px;
+  }
+}
+
+.imageContainer {
+  position: relative;
+  display: block;
+
+  width: 400px;
+  height: 600px;
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  transition: background-image 0.5s ease;
+}

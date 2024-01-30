@@ -1,0 +1,44 @@
+@import "../../../styles/utils";
+
+.button {
+  min-height: 55px;
+  width: 200px;
+  border-radius: 50px;
+  margin-bottom: 15px;
+
+  background: #ffcebe;
+  border: 2px solid #fa855f;
+
+  cursor: pointer;
+
+  &:hover {
+    background: #ffc1be;
+  }
+
+  @include tablet {
+    width: 220px;
+    height: 60px;
+  }
+
+  @include small {
+    width: 270px;
+    height: 70px
+  }
+}
+
+.wrapper {
+  @extend %center;
+}
+
+.textContainer {
+  width: 70%;
+  min-width: fit-content;
+}
+
+.imageContainer {
+  width: 30%;
+}
+
+.icon {
+  width: 40%;
+}

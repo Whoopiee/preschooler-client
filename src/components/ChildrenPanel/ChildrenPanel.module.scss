@@ -1,0 +1,99 @@
+@import '../../styles/utils';
+
+$childBorder: 2px;
+
+.panel {
+  @extend %center;
+  align-self: flex-start;
+  justify-content: flex-start;
+
+  width: calc(100% - 50px); // 50px - border radius of menu
+
+  @include wide {
+    width: calc(100% - 80px); // and 80 on wide
+  }
+
+  position: relative;
+  top: $childBorder;
+}
+
+.child {
+  @extend %center;
+
+  flex: 1 1 200px;
+  max-width: 400px;
+
+  height: 38px;
+  padding: 0 10px;
+
+  border: $childBorder solid $dark;
+  background-color: #f1f1f1;
+  border-radius: 30px 30px 0px 0px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  border-bottom: none;
+  position: relative;
+  z-index: 1;
+
+  @include tablet {
+    height: 45px;
+    padding: 0 20px;
+  }
+
+  @include small {
+    height: 65px;
+    border-radius: 50px 50px 0px 0px;
+  }
+
+  &:hover {
+    background-color: #fafafa;
+  }
+
+  &.selected {
+    background-color: #fff;
+    z-index: 3;
+  }
+}
+
+.plusButton {
+  @extend %center;
+
+  width: max-content;
+  padding: 5px;
+  margin-left: 10px;
+
+  border: $childBorder solid $dark;
+  background-color: #f1f1f1;
+  border-radius: 50%;
+
+  @include tablet {
+    align-self: flex-start;
+    padding: 7px;
+    margin-left: 15px;
+  }
+
+  @include small {
+    align-self: center;
+    padding: 10px;
+    margin-left: 20px;
+  }
+
+  &:hover {
+    background-color: #fafafa;
+  }
+}
+
+.plusImage {
+  max-width: 15px;
+
+  @include tablet {
+    max-width: 22px;
+  }
+}
+
+.mb {
+  margin-bottom: 5px;
+}

@@ -1,0 +1,85 @@
+@mixin mobile {
+  @media (max-width: 575px) {
+    @content;
+  }
+}
+
+@mixin tiny {
+  @media (min-width: 350px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 576px) {
+    @content;
+  }
+}
+
+@mixin small {
+  @media (min-width: 769px) {
+    @content;
+  }
+}
+
+@mixin wide {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (min-width: 1400px) {
+    @content;
+  }
+}
+
+@mixin mobileAndTablet {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin laptops {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin setHeightByTextLines($maxLines: 1) {
+  line-height: 1;
+  overflow: hidden;
+  text-align: left;
+
+  font-size: map.get($mainText, "mobile");
+  height: map.get($mainText, "mobile") * 2;
+
+  @include tablet {
+    font-size: map.get($mainText, "tablet");
+    height: map.get($mainText, "tablet") * 2;
+  }
+
+  @include small {
+    font-size: map.get($mainText, "small");
+    height: map.get($mainText, "small") * 2;
+  }
+
+  @include wide {
+    font-size: map.get($mainText, "wide");
+    height: map.get($mainText, "wide") * 2;
+  }
+
+  @include large {
+    font-size: map.get($mainText, "large");
+    height: map.get($mainText, "large") * 2;
+  }
+}
+
+@mixin size($size) {
+  width: $size;
+  height: $size;
+}
+
+@mixin getListMaxWidth($numberOfCards, $gap, $width) {
+  max-width: $numberOfCards * $width + ($numberOfCards - 1) * $gap;
+}

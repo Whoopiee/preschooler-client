@@ -1,0 +1,51 @@
+@import "../../../../styles/utils";
+
+.container {
+  width: 100%;
+  height: auto;
+  max-width: 1600px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  position: relative;
+}
+
+.image {
+  width: 100%;
+}
+
+.buttonImg {
+  background-color: transparent content-box;
+  background-clip: content-box;
+  border: none;
+  position: absolute;
+  display: block;
+
+  img {
+    width: 100%;
+  }
+}
+
+.buttonImg0 {
+  width: 7%;
+  bottom: 0%;
+  left: 30%;
+}
+
+.buttonImg1 {
+  width: 6%;
+  top: 50%;
+  left: 48%;
+}
+
+.buttonImg2 {
+  width: 14%;
+  left: 57%;
+  bottom: 5%;
+}
+
+.buttonImg3 {
+  width: 21%;
+  top: 28%;
+  left: 30%;
+}

@@ -1,0 +1,13 @@
+@import '../../../../styles/utils';
+
+.container {
+  @extend %center;
+  flex-wrap: wrap;
+  gap: 40px;
+  width: 70%;
+  margin-bottom: 30px;
+
+  @include wide {
+    justify-content: space-evenly;
+  }
+}

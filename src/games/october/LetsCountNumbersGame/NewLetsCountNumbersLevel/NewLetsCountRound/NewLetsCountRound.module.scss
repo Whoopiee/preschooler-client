@@ -1,0 +1,70 @@
+@import '../../../../../styles/utils';
+
+$height-mobile: 200px;
+$height-small: 300px;
+
+.round {
+  @extend %center;
+  flex-direction: column;
+}
+
+.image {
+  width: 90%;
+  object-fit: contain;
+  margin-bottom: 20px;
+
+  @include small {
+    max-width: 650px;
+  }
+
+  @include wide {
+    max-width: 850px;
+  }
+}
+
+.buttons {
+  @extend %center;
+  flex-direction: column;
+  gap: 40px;
+
+  width: 100%;
+
+  @include small {
+    flex-direction: row;
+    gap: 50px;
+  }
+}
+
+.button {
+  width: 100%;
+  height: 100%;
+
+  border-radius: 25px;
+  font-size: 32px;
+
+  @include small {
+    font-size: 40px;
+  }
+
+  @include wide {
+    font-size: 60px;
+  }
+}
+
+.item {
+  @extend %center;
+  width: 80%;
+  height: 100px;
+
+  @include small {
+    width: 250px;
+  }
+
+  @include wide {
+    height: 130px;
+  }
+}
+
+.icon {
+  max-width: 90px;
+}

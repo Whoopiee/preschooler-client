@@ -1,0 +1,42 @@
+@import '../../../../../styles/utils';
+
+.container {
+  @extend %mb-1;
+  text-align: center;
+  width: 100%;
+
+  &.topMargin {
+    @extend %mt-3;
+  }
+}
+
+.description {
+  display: inline-block;
+  line-height: 120%;
+
+  justify-self: center;
+  text-align: center;
+
+  @include wide {
+    max-width: 1000px;
+  }
+}
+
+.play {
+  width: 50px;
+  height: 50px;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25);
+}
+
+.playVerse {
+  display: block;
+  margin-left: 15px;
+}
+
+.verse {
+  display: flex;
+
+  @include large {
+    margin-left: 50px;
+  }
+}

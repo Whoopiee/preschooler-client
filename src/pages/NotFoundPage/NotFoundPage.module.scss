@@ -1,0 +1,39 @@
+@import '../../styles/utils';
+
+.page {
+  @extend %center;
+  height: 70vh;
+  flex-direction: column;  
+}
+
+.error {
+  @extend %mb-2;
+
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.number {
+  font-weight: 800;
+  font-size: 15rem;
+  line-height: 1;
+
+  @include mobileAndTablet {
+    font-size: 8rem;
+  }
+}
+
+.text {
+  @extend %mb-2;
+
+  font-weight: 300;
+  color: $blue;
+}
+
+.button {
+  padding: 1.2rem 3rem;
+  background: #ffcebe;
+  border: 2px solid #fa855f;
+  border-radius: 50px;
+}

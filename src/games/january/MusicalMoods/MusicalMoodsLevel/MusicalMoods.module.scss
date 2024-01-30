@@ -1,0 +1,47 @@
+@import "../../../../styles/utils";
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 15px;
+  gap: 40px;
+
+  @include wide {
+    gap: 30px;
+  }
+}
+
+.halfDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  width: 85%;
+  border-radius: 49px;
+  margin-bottom: 20px;
+
+  @include small {
+    margin-bottom: 30px;
+  }
+
+  @include wide {
+    margin-bottom: 35px;
+  }
+}
+
+.title {
+  font-size: 25px;
+
+  @include small {
+    font-size: 29px;
+  }
+
+  @include wide {
+    font-size: 33px;
+  }
+}

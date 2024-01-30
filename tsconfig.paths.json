@@ -1,0 +1,45 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@assets/*": [
+        "./src/assets/*"
+      ],
+      "@client/*": [
+        "./src/client/*"
+      ],
+      "@components/*": [
+        "./src/components/*"
+      ],
+      "@games/*": [
+        "./src/games/*"
+      ],
+      "@hooks/*": [
+        "./src/hooks/*"
+      ],
+      "@layouts/*": [
+        "./src/layouts/*"
+      ],
+      "@pages/*": [
+        "./src/pages/*"
+      ],
+      "@services/*": [
+        "./src/services/*"
+      ],
+      "@customTypes/*": [
+        "./src/types/*"
+      ],
+      "@helpers/*": [
+        "./src/helpers/*"
+      ],
+      "@templates/*": [
+        "./src/templates/*"
+      ],
+      "@core/*": [
+        "./src/redux/features/core/*"
+      ],
+      "@redux/*": [
+        "./src/redux/*"
+      ],
+    }
+  }
+}

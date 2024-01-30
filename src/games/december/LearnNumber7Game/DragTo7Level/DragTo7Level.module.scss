@@ -1,0 +1,165 @@
+@import '../../../../styles/utils';
+// @use '../../../../styles/utils/vars';
+
+
+@keyframes fadeOutBackground-skate {
+  0% {
+    background-image: url($FILES_API_URL + '/images/objects/skateboard.png');
+  }
+
+  100% {
+    background-image: none;
+  }
+}
+
+@keyframes fadeOutBackground-pickle {
+  0% {
+    background-image: url($FILES_API_URL + '/images/objects/pickle-faded-250x250.png');
+  }
+
+  100% {
+    background-image: none;
+  }
+}
+
+@keyframes fadeOutBackground-fish {
+  0% {
+    background-image: url($FILES_API_URL + '/images/animals/fish-250x250.png');
+  }
+
+  100% {
+    background-image: none;
+  }
+}
+
+.container {
+  @extend %center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.block {
+  display: flex;
+  min-width: 920px;
+  min-height: 105px;
+  margin-bottom: 100px;
+  flex-direction: column;
+
+  @include wide {
+    flex-direction: row;
+  }
+}
+
+.image {
+  width: 100px;
+  height: 100px;
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.additionalBlock {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  padding: 25px;
+  width: 428px;
+  height: 240px;
+  border-radius: 20px;
+  border: 1px dashed black;
+}
+
+.additionalWrapper {
+  @extend %center;
+  width: 100%;
+  gap: 40px;
+  flex-direction: column;
+
+  @include large {
+    @extend %center;
+    flex-direction: row;
+  }
+}
+
+.column {
+  width: 100px;
+  height: 105px;
+  margin: auto;
+
+
+  // &:nth-child(1) {
+  //   margin-bottom: random($limit: 30) + px;
+  // }
+
+  // &:nth-child(2) {
+  //   margin-top: random($limit: 30) + px;
+  // }
+
+
+  // &:nth-child(3) {
+  //   margin-bottom: random($limit: 30) + px;
+  // }
+
+}
+
+.card {
+  width: 100px;
+  height: 100px;
+  transition: all .3s;
+}
+
+.columnCard {
+  width: 100px;
+  height: 100px;
+}
+
+// .columnImage-fish {
+//   background-size: contain;
+//   background-image: url($FILES_API_URL + '/images/animals/fish-250x250.png');
+
+//   &:hover {
+//     background-image: none;
+//   }
+// }
+
+// .columnImage-skateboard {
+//   background-size: contain;
+//   background-image: url($FILES_API_URL + '/images/objects/skateboard.png');
+
+//   &:hover {
+//     background-image: none;
+//   }
+// }
+
+// .columnImage-pickle {
+//   background-size: contain;
+//   background-image: url($FILES_API_URL + '/images/objects/pickle-faded-250x250.png');
+
+//   &:hover {
+//     background-image: none;
+//   }
+// }
+
+.visible {
+  opacity: 1;
+}
+
+.hide {
+  opacity: 0;
+}
+
+.faded {
+  @extend %faded;
+  transition: all .3s;
+
+  &:hover {
+    background-image: none
+  }
+}
+
+.none {
+  background-image: none;
+}

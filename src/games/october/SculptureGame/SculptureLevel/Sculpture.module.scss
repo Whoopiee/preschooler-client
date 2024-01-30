@@ -1,0 +1,107 @@
+@import '../../../../styles/utils';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 2rem;
+
+  .container__text {
+    font-size: 21px;
+    width: 50%;
+    text-align: center;
+  }
+
+  .img_block {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+
+    .sculptureImg {
+      width: 23%;
+      object-fit: contain;
+    }
+  }
+
+  .container_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+  }
+}
+
+.back {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin: 20px;
+  height: 740px;
+  border-radius: 50px;
+  position: relative;
+  // display: flex;
+
+  .buttonImg {
+    background-color: transparent content-box;
+    background-clip: content-box;
+    border: none;
+    position: absolute;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .buttonImg0 {
+    left: 20%;
+    top: 40%;
+    width: 14%;
+
+    img {
+      width: 80%;
+    }
+
+    @include wide {
+      top: 35%;
+    }
+  }
+
+  .buttonImg1 {
+    top: 47%;
+    right: 50%;
+    width: 4%;
+
+    img {
+      width: 80%;
+    }
+
+    @include wide {
+      top: 44%;
+    }
+  }
+
+  .buttonImg2 {
+    top: 51%;
+    right: 40%;
+    width: 13%;
+
+    @include wide {
+      top: 54%;
+    }
+  }
+
+  .buttonImg3 {
+    bottom: 29%;
+    right: 5%;
+    width: 11%;
+
+    @include wide {
+      bottom: 23%;
+    }
+
+    @include large {
+      bottom: 11%;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@import '../../styles/utils';
+
+.list {
+  @extend %center;
+
+  width: 100%;
+  max-width: 1480px;
+  flex-wrap: wrap;
+  row-gap: 30px;
+  column-gap: 30px;
+}

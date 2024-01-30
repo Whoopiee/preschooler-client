@@ -1,0 +1,27 @@
+@import '../../../styles/utils';
+
+.items {
+  @extend %center;
+  width: 100%;
+  gap: 20px;
+}
+
+.item {
+  width: 33%;
+}
+
+.button {
+  @extend %center;
+
+  height: 50px;
+  width: 100%;
+
+  border-radius: 15px;
+  border: 1px solid orange;
+  background-color: #fcf7f4;
+  transition: background-color 0.4s ease;
+
+  &.selected {
+    background-color: #ffc9aa;
+  }
+}

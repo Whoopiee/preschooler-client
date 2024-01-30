@@ -1,0 +1,6 @@
+@import '../../../../styles/utils';
+
+.image {
+  @extend %mb-2;
+  width: 40%;
+}

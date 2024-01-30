@@ -1,0 +1,41 @@
+@import '../../styles/utils';
+
+.container {
+  width: 100%;
+}
+
+.dropzone {
+  display: flex;
+  width: 450px;
+  margin: 0 auto;
+
+  @include wide {
+    width: 900px;
+  }
+}
+
+.answer {
+  @extend %center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.card {
+  width: 128px;
+}
+
+.dropzoneItem {
+  margin: 5px;
+}
+
+.target {
+  margin: 0;
+  width: 128px;
+  height: 128px;
+  border: 1px dashed grey;
+  border-radius: 20px;
+}
+
+.text {
+  font-size: 40px;
+}

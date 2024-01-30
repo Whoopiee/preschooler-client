@@ -1,0 +1,14 @@
+@import '../../styles/utils';
+
+.warning {
+  @extend %min-height-1;
+  @extend %center;
+
+  flex-direction: column;
+}
+
+.text {
+  @extend %mt-2;
+  width: 80%;
+  text-align: center;
+}

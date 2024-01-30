@@ -1,0 +1,118 @@
+@import '../../../../styles/utils';
+
+%cardSize {
+  width: 70px;
+  height: 70px;
+
+  @include tablet {
+    width: 100px;
+    height: 100px;
+  }
+
+  @include small {
+    width: 130px;
+    height: 130px;
+  }
+
+  @include wide {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.level {
+  position: relative; // for explosion position
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  gap: 10px;
+
+  align-items: end;
+
+  // for extremely small devices
+  @media (max-width: 340px) {
+    grid-template-columns: 1fr;
+  }
+
+  @include tablet {
+    gap: 20px;
+  }
+
+  @include small {
+    row-gap: 40px;
+    column-gap: 60px;
+  }
+
+  @include wide {
+    row-gap: 60px;
+    column-gap: 120px;
+  }
+
+  @include large {
+    row-gap: 80px;
+  }
+}
+
+.slot {
+  @extend %center;
+  @extend %cardSize;
+  flex-direction: column;
+
+  padding: 10px;
+
+  @include tablet {
+    padding: 15px;
+  }
+
+  @include wide {
+    padding: 20px;
+  }
+
+  // background-color: rgb(221, 221, 219);
+  border-radius: 22px;
+  transition: background-color 0.5s ease;
+  user-select: none;
+
+  &.heightByContent {
+    height: fit-content;
+  }
+
+  &.success {
+    background-color: $lightGreen;
+  }
+}
+
+.text {
+  display: block;
+  margin-bottom: 15px;
+  white-space: wrap;
+}
+
+.card {
+  @extend %center;
+  @extend %cardSize;
+
+  user-select: none; // for not selecting text and images accidentally
+
+  background-color: $background;
+  border-radius: 15px;
+  transition: background-color 0.3s ease,
+    border-color 0.3s ease;
+
+  &.placeholder {
+    border: 2px $border dashed;
+
+    &.over {
+      border-color: #fa855f;
+    }
+  }
+
+  @include small {
+    border-radius: 25px;
+  }
+}
+
+.image {
+  max-width: 80%;
+}

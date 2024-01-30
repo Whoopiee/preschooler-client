@@ -1,0 +1,46 @@
+@import '../../../styles/utils';
+
+.container {
+  width: 100%;
+}
+
+.wrapper {
+  width: 220px;
+  height: 220px;
+  position: relative
+}
+
+.dropzone {
+  @extend %center;
+  width: 200px;
+  max-width: 100%;
+  height: 200px;
+  border: 1px dashed #e1e1e1;
+}
+
+.image__uploader {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.faded {
+  opacity: 70%;
+  font-size: 18px;
+}
+
+.close {
+  @extend %center;
+  position: absolute;
+  top: -18px;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #f7f7f7;
+  transition: background-color .1s ease-out;
+
+  &:hover {
+    background-color: #e1e1e1;
+  }
+}

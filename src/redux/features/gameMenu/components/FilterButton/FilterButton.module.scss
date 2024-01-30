@@ -1,0 +1,19 @@
+@import '../../../../../styles/utils';
+
+.button {
+  box-sizing: border-box;
+  padding: 10px;
+  width: 100%;
+
+  background: #F1F1F1;
+  border: 2px solid #6A6A6A;
+  border-radius: 44px;
+
+  @include tablet {
+    padding: 15px 0;
+  }
+
+  @include wide {
+    padding: 20px 0;
+  }
+}

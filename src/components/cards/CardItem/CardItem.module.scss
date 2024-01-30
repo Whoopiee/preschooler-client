@@ -1,0 +1,57 @@
+@import '../../../styles/utils';
+
+@mixin cardSize($size) {
+  @include size($cardSizeMobile);
+
+  @include tablet {
+    @include size($size);
+  }
+}
+
+.item {
+  &.cardsInARow2 {
+    @include cardSize($cardSizeBigest);
+
+    @include small {
+      height: 300px;
+    }
+
+  }
+
+  &.cardsInARow3 {
+    @include cardSize($cardSizeBig);
+
+    @include small {
+      height: 300px;
+    }
+  }
+
+  &.cardsInARow4 {
+    @include size($cardSizeNormal);
+  }
+
+  &.cardsInARow5 {
+    @include size($cardSizeSmall);
+  }
+
+  &.cardsWide {
+    @include wide {
+      width: 470px;
+      height: 320px;
+    }
+  }
+
+  &.heightByContent {
+    height: max-content;
+  }
+
+  &.widthByContent {
+    width: fit-content;
+  }
+
+  &.mobile100PercentWidth {
+    @include mobile {
+      width: 100%;
+    }
+  }
+}

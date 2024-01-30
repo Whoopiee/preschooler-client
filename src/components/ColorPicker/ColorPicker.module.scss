@@ -1,0 +1,37 @@
+@import '../../styles/utils';
+
+.colorList {
+  @extend %center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 15px;
+
+  &.horizontal {
+    flex-direction: row;
+  }
+}
+
+.color {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  transition: box-shadow $td;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  &.selected {
+    border: 2px #444 solid;
+
+    @include small {
+      border-width: 3px;
+    }
+  }
+
+  @include small {
+    width: 70px;
+    height: 70px;
+  }
+}

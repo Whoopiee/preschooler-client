@@ -1,0 +1,122 @@
+@import "../../../../styles/utils";
+
+.container {
+  @extend %center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.mainImageDiv {
+  width: 100%;
+  object-fit: contain;
+  position: relative;
+
+  @include tablet {
+    width: 90%;
+  }
+
+  @include small {
+    width: 80%;
+  }
+
+  @include wide {
+    width: 70%;
+  }
+}
+
+.mainImage {
+  width: 100%;
+}
+
+.dropZone {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 80%;
+  height: 60%;
+}
+
+.dragZone {
+  width: 50%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  max-width: 1000px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+  background-color: transparent;
+
+  @include tiny {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include wide {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
+
+.cardWrapper {
+  @extend %center;
+  flex-direction: column;
+  position: relative;
+  border: 1px solid black;
+  border-radius: 25px;
+  width: 130px;
+  height: 130px;
+  padding-bottom: 8px;
+
+  @include tablet {
+    width: 180px;
+    height: 180px;
+  }
+
+  @include small {
+    width: 200px;
+    height: 200px;
+  }
+
+  @include wide {
+    width: 230px;
+    height: 230px;
+  }
+
+  @include large {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+.dragItem {
+  margin-top: auto;
+  z-index: 100;
+  width: 60%;
+  max-width: 200px;
+  max-height: 200px;
+
+  @include small {
+    width: 70%
+  }
+
+  @include wide {
+    width: 75%;
+  }
+
+  @include large {
+    width: 100%;
+  }
+}
+
+.image {
+  width: 90%;
+
+  @include tablet {
+    width: 100%;
+  }
+}
+
+
+.cardTitle {
+  margin-top: auto;
+}

@@ -1,0 +1,22 @@
+@import '../../../../styles/utils';
+
+.layout {
+  max-width: 1000px;
+
+  @include small {
+    width: 600px;
+  }
+
+  @include wide {
+    width: 800px;
+  }
+
+  @include large {
+    width: 1000px
+  }
+}
+
+.image {
+  height: 100%;
+  border-radius: 30px;
+}

@@ -1,0 +1,80 @@
+@import '../../../../../styles/utils';
+
+.page {
+  box-sizing: border-box;
+
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+
+  min-height: 100vh;
+  width: 100%;
+  padding: 15px 0;
+
+  @include small {
+    padding: 25px 0;
+  }
+}
+
+.top {
+  @extend %mb-1;
+  @extend %center;
+
+  flex-direction: column;
+
+  position: relative;
+  justify-self: center;
+  width: 100%;
+}
+
+.closeButton {
+  @extend %buttonText;
+  align-self: flex-end;
+
+  height: 40px;
+  width: max-content;
+  margin-bottom: 10px;
+  padding: 5px 15px;
+
+  border-radius: 44px;
+
+  @include tablet {
+    margin-bottom: 0;
+  }
+
+  @include wide {
+    position: absolute;
+    right: 5%;
+    top: 0;
+
+    margin-bottom: 0;
+  }
+}
+
+.level {
+  @extend %mb-1;
+  @extend %center;
+
+  flex-direction: column;
+  min-width: 100%; // очень важная хуйня (для правильной адаптации DrawCanvas)
+  width: 100%;
+
+  text-align: center;
+}
+
+.buttons {
+  @extend %center;
+  gap: 15px;
+
+  @include small {
+    gap: 25px;
+  }
+
+  @include wide {
+    gap: 50px;
+  }
+}
+
+.button {
+  @extend %primaryButton;
+  @extend %buttonText;
+}
